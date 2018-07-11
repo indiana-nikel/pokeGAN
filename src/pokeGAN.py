@@ -22,8 +22,8 @@ newPoke_path = './' + version
 def lrelu(x, n, leak=0.2):
     return tf.maximum(x, leak * x, name=n)
 
-def process_data():   
-    working_dir = os.path.dirname(os.getcwd())
+def process_data():
+    working_dir = os.getcwd()
     pokemon_dir = os.path.join(working_dir, 'data')
     images = []
     for each in os.listdir(pokemon_dir):
